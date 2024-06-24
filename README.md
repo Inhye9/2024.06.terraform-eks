@@ -38,7 +38,7 @@ AWS 웹콘솔 > EC2 > Key pair > Key pair 생성하기
 ```bash
 # kubectl 설치 
 # https://docs.aws.amazon.com/ko_kr/eks/latest/userguide/install-kubectl.html
-curl -O https://s3.us-west-2.amazonaws.com/amazon-eks/1.27.12/2024-04-19/bin/linux/amd64/kubectl
+curl -O https://s3.us-west-2.amazonaws.com/amazon-eks/1.29.3/2024-04-19/bin/linux/amd64/kubectl
 chmod +x ./kubectl
 sudo mv ./kubectl /usr/local/bin
 
