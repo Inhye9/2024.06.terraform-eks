@@ -15,7 +15,8 @@ module "eks-blue" {
   eks_version                     = var.eks_version 
   public_key_path                 = var.key_path
   key_pair_name                   = var.key_pair_name  
-  app_ng_version                  = "3"
+  app_ng_version                  = "1"
+  mgmt_ng_version                  = "1"
 
   # aws eks describe-addon-versions --addon-name vpc-cni --kubernetes-version 1.29
   vpc_cni_version                 = "v1.18.1-eksbuild.1"
