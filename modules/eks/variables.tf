@@ -68,6 +68,10 @@ variable "app_ng_version" {
   type        = string
 }
 
+variable "mgmt_ng_version" {
+  description = "Mgmt NodeGroup Version"
+  type        = string
+}
 # variable "front_ng_version" {
 #   description = "Front NodeGroup Version"
 #   type        = string

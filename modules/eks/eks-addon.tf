@@ -206,7 +206,7 @@ resource "aws_iam_role" "aws_load_balancer_controller" {
 }
 
 resource "aws_iam_policy" "aws_load_balancer_controller" {
-  policy = file("/root/terraform/2024.06.thm-eks-cluster-blue-green/modules/eks/blue/AWSLoadBalancerController.json")
+  policy = file("../../modules/eks/AWSLoadBalancerController.json")
   name   = "${var.cluster_name}-aws-load-balancer-controller-pol"
 
   tags = local.common_tags
@@ -319,7 +319,8 @@ resource "kubernetes_service_account" "aws-load-balancer-controller" {
 #      "app.kubernetes.io/name" = "aws-load-balancer-controller"
 #    }
   }
-  depends_on = [aws_iam_role.aws_load_balancer_controller.arn]
+  #depends_on = [aws_iam_role.aws_load_balancer_controller.arn]
+  depends_on = [aws_iam_role.aws_load_balancer_controller]
 }
 
 resource "kubernetes_service_account" "external-dns" {

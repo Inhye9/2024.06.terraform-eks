@@ -7,6 +7,7 @@ module "aws_auth" {
   version = "~> 20.0"
 
   manage_aws_auth_configmap = true
+  create_aws_auth_configmap = true  #add
 
   aws_auth_roles = [
     {
