@@ -319,6 +319,7 @@ resource "kubernetes_service_account" "aws-load-balancer-controller" {
 #      "app.kubernetes.io/name" = "aws-load-balancer-controller"
 #    }
   }
+
   depends_on = [aws_iam_role.aws_load_balancer_controller]
 }
 
